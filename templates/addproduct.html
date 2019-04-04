@@ -1,0 +1,31 @@
+{% extends "mastertemplate.html" %}
+{% block body %}
+    <h1></h1>
+
+<hr>
+
+<form action="" method="post">
+    <div><h2>Add a new Product</h2></div>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.productname.label }}<br>
+            {{ form.productname(size=128) }}
+        </p>
+        <div style="width:50%">
+            {{ form.productdescription.label }}<br>
+        </div>
+    <div style="width:25%">
+        {{ form.productdescription(size=1024) }}
+    </div>
+    <p>
+            {{ form.productprice.label }}<br>
+            {{ form.productprice(size=32) }}
+        </p>
+    <p>
+            {{ form.productimage.label }}<br>
+            {{ form.productimage(size=64) }}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+
+{% endblock %}

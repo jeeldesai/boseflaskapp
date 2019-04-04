@@ -1,0 +1,17 @@
+{% extends "mastertemplate.html" %}
+{% block body %}
+<div class="block1">
+<h1></h1>
+
+{% for q in query %}
+<img src=/static/{{q.productimage}} class="center" style="width:300px;height:250px;">
+<blockquote>
+    {{q.productname}}
+</blockquote>
+DESCRIPTION     <b>{{q.productdescription}}</b>
+    <hr>
+    PRICE   $<b>{{q.productprice}}</b>
+{% endfor %}
+
+</div>
+{% endblock %}

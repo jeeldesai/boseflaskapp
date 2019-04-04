@@ -1,0 +1,46 @@
+{% extends "mastertemplate.html" %}
+{% block body %}
+<!-- Highlights -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h1>
+    <a style="background-color:black;" href="/productlist" > <img src="/static/bose_mobile_logo.png" width="200px"></a>
+    </h1>
+    <p class="w3-opacity"><i>Better sound through research.</I></p>
+    <br>
+    <hr>
+    <p class="w3-justify">Check out our featured Headphones and Speakers  </p>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-third">
+        <p>
+        <a href="/detail/5" class="center">QuietComfort 35 wireless headphones</b></a>
+          <img src="/static/qc35.png" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+        </p>
+      </div>
+      <div class="w3-third">
+        <p>
+          <a href="/detail/2" class="center">SoundLink Color</b></a>
+          <img src="/static/shopping.jpeg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+        </p>
+      </div>
+      <div class="w3-third">
+        <p>
+          <a href="/detail/1" class="center">SoundTrue earphones</b></a>
+          <img src="/static/soundtrue.png" class="w3-round" alt="Random Name" style="width:60%">
+        </p>
+      </div>
+    </div>
+  </div>
+<hr>
+<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band"">
+  <h2>Check out out other products</h2>
+    {% for q in query %}
+  <p>
+    <a href="/detail/{{q.id}}" class="center">{{q.productname}}</b></a>
+    <img src=/static/{{q.productimage}} class="center" style="width:300px;height:250px;">
+  </p>
+<!-- <img src=/static/{{q.image}}>
+  -->
+  {% endfor %}
+</div>
+{% endblock %}
+
